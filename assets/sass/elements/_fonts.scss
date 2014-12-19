@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+@font-face {
+	font-family: 'goodwin';
+	src:url('../fonts/goodwin.eot');
+	src:url('../fonts/goodwin.eot') format('embedded-opentype'),
+		url('../fonts/goodwin.woff') format('woff'),
+		url('../fonts/goodwin.ttf') format('truetype'),
+		url('../fonts/goodwin.svg') format('svg');
+	// src:url('../fonts/goodwin.eot?-sz4krk');
+	// src:url('../fonts/goodwin.eot?#iefix-sz4krk') format('embedded-opentype'),
+	// 	url('../fonts/goodwin.woff?-sz4krk') format('woff'),
+	// 	url('../fonts/goodwin.ttf?-sz4krk') format('truetype'),
+	// 	url('../fonts/goodwin.svg?-sz4krk#goodwin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'goodwin';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+	content: "\e609";
+}
+.icon-mail:before {
+	content: "\e60a";
+}
+.icon-in:before {
+	content: "\e60b";
+}
+.icon-pencil:before {
+	content: "\e607";
+}
+.icon-pencil2:before {
+	content: "\e608";
+}
+.icon-stack:before {
+	content: "\e600";
+}
+.icon-coin:before {
+	content: "\e601";
+}
+.icon-briefcase:before {
+	content: "\e602";
+}
+.icon-blocked:before {
+	content: "\e603";
+}
+.icon-googleplus:before {
+	content: "\e604";
+}
+.icon-facebook:before {
+	content: "\e605";
+}
+.icon-twitter:before {
+	content: "\e60c";
+}
+.icon-linkedin:before {
+	content: "\e606";
+}

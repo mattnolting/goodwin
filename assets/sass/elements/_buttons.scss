@@ -1,0 +1,51 @@
+.landing {
+	.btn {
+		@include border-radius(0);
+		@include roboto(14px, #fff);
+
+		&.btn-landing {
+			background: rgba(0,0,0,.2);
+			border: 4px solid #fff;
+			@include garamond(32px, #fff);
+			line-height: 1;
+			@include rem('padding', 8px 24px);
+
+			&:hover {
+				background: #2572b8;
+			}
+		}
+	}
+}
+
+
+.btn {
+	position: relative;
+	display: inline-block;
+	@include rem('margin-top', 12px);
+	@include rem('padding', 4px 24px);
+	@include roboto(14px, #fff);
+	@include font-size(11px);
+	@include border-radius(8px);
+	border: none;
+	color: #242934;
+	background: #B7BBBD;
+
+	&:hover {
+		color: #242934;
+		background: #fff;
+	}
+
+	&.btn-primary {
+		text-transform: uppercase;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 9px;
+			right: 12px;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			border-left: 4px solid #000;
+		}
+	}
+}

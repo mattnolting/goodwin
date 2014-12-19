@@ -1,0 +1,166 @@
+.modals {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		.box-wrap {
+			height: 120px;
+			@include rem('padding', 0 40px);
+
+			background: #fff;
+			text-align: center;
+			@include transition-duration(.2s);
+
+			@include media-query (md) {
+				height: 230px;
+			}
+
+			&:hover {
+				background: $header_font_color;
+				cursor: pointer;
+
+				h2 {
+					color: #fff;
+				}
+			}
+		}
+
+		li {
+			@include make-md-column(6, 16px);
+			@include rem('margin-bottom', 16px);
+		}
+	}
+
+	h2 {
+		@extend %reset;
+		@include font-size(14px);
+		color: $header_font_color;
+		@extend %vertical-align;
+
+		@include media-query (md) {
+			@include font-size(22px);
+		}
+
+	}
+
+	.content {
+		display: none;
+	}
+}
+
+@mixin modal-padding{
+	@include rem('padding', 24px 24px 12px);
+
+	@include media-query (sm) {
+		@include rem('padding', 62px 62px 31px);
+	}
+}
+
+.modal {
+
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 999;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		padding-bottom: 4px;
+		color: #fff;
+		@include box-shadow(0 0 0 6px #fff);
+		@include border-radius(50%);
+		display: block;
+		@include opacity(1);
+
+		outline: none;
+		border:none !important;
+	}
+
+	.modal-body {
+		position: relative;
+		@include modal-padding;
+		@extend %clearfix;
+	}
+
+
+	.modal-content {
+		background-color: $header_font_color;
+		@include border-radius(0);
+
+		h2, .content {
+			color: #fff;
+		}
+
+		.content { overflow: hidden; }
+
+		h2 {
+			@include rem('padding-bottom', 24px);
+			@include rem('margin', 0 0 24px);
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	.navigation {
+		width: 100%;
+		@include rem('margin-top', 50px);
+		@extend %clearfix;
+
+		.next, .previous {
+			position: relative;
+			font-family: $base_font_family;
+			@include font-size(11px);
+
+			color: #fff;
+			text-transform: uppercase;
+			@include rem('padding', 8px 44px 8px 34px);
+			border: 2px solid #92b9dc;
+
+
+			&:after, &:before {
+				position: absolute;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background: darken($header_font_color, 10);
+			}
+		}
+
+		.next {
+			float: right;
+
+			&:after {
+				content: '';
+				top: 12px;
+				right: 32px;
+
+				width: 0;
+				height: 0;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+
+				border-left: 5px solid #fff;
+			}
+		}
+
+		.previous {
+			@include rem('padding', 8px 34px 8px 44px);
+			float: left;
+
+			&:before {
+				content: '';
+				top: 12px;
+				left: 32px;
+
+				width: 0;
+				height: 0;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+
+				border-right: 5px solid #fff;
+			}
+		}
+	}
+}

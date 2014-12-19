@@ -1,0 +1,37 @@
+article.hentry {
+	@include rem('padding', 0 0 20px);
+	@include rem('margin', 0 0 20px);
+	border-bottom: 1px solid #B3B3B3;
+	text-align: center;
+
+	&:last-of-type { border-bottom: none; }
+	header { @include rem('margin-bottom', 12px); }
+
+	.btn {
+		@include rem('margin-top', 20px);
+	}
+}
+
+.entry-title {
+	margin-top: 0;
+	color: #3A414E;
+	@include font-size(25px);
+
+	a { color: #3A414E; }
+}
+
+time { font-family: 'Georgia', serif; }
+
+.entry-content {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.post-excerpt {
+	width: 100%;
+	display: block;
+}
+
+#respond {
+	display: none;
+}

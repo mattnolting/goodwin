@@ -1,0 +1,382 @@
+.home .group.testimonials {
+	margin: 0 !important;
+}
+
+.home {
+
+	.container-fluid {
+		max-width: 1085px;
+		@include media-query (sm_max) {
+			padding-bottom: 60px;
+		}
+
+		@include media-query (md) {
+			display: block;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+	}
+
+	[class^="col-"] {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.slide {
+		-webkit-perspective: 1000;
+		-webkit-transform-style: preserve-3d;
+		-moz-perspective: 1000;
+		-moz-transform-style: preserve-3d;
+		-o-perspective: 1000;
+		-o-transform-style: preserve-3d;
+		perspective: 1000;
+		transform-style: preserve-3d;
+	}
+
+	.owl-item { margin-right: 1px; }
+	.owl-item, .owl-carousel, .owl-wrapper-outer, .owl-wrapper, .owl-item > div { height: 100%; }
+
+	div[class^="col-sm-"], div[class*="col-sm-"] {
+		padding-left: 4px;
+		padding-right: 4px;
+
+		div[class^="col-sm-"], div[class*="col-sm-"] {
+			padding-left: 2.5px;
+			padding-right: 2.5px;
+		}
+
+	}
+
+	main {
+		h1, h2, h3, p, ul, li {
+			color: #fff;
+		}
+	}
+
+	// Testimonials Block
+	//==================================================================
+	.testimonials {
+		@include rem('padding', 30px);
+		@include font-size(21px);
+		line-height: 1;
+
+		background: $blue_light;
+		color: #fff;
+
+		a {
+			color: #fff;
+		}
+	}
+
+
+
+	// News Block
+	//==================================================================
+	.news {
+
+		&:hover {
+			background-image-opacity: .2;
+			background-color: $grey_med;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../img/bg_making-difference.jpg);
+			background-size: cover;
+			z-index: 1;
+			@include transition-duration(.2s);
+		}
+	}
+
+
+	// What We Do Block
+	//==================================================================
+	.what-we-do {
+		background: $grey_med;
+
+		&:hover {
+			background: darken($grey_med, 20)
+		}
+	}
+
+
+	// What Clients Say Block
+	//==================================================================
+	.what-clients-say { background: url(../img/bg_who-we-are.jpg); }
+
+
+	// Who We Are Block
+	//==================================================================
+	.who-we-are {
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../img/bg_who-we-are.jpg);
+			background-size: cover;
+			z-index: 1;
+			@include transition-duration(.2s);
+
+		}
+
+		span {
+			@include media-query (sm) {
+				text-align: right;
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.link {
+			@include media-query (sm) {
+				width: 70%;
+			}
+		}
+	}
+
+	// Why Us
+	//==================================================================
+	.why-us {
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../img/bg_why-us.jpg);
+			background-size: cover;
+			z-index: 1;
+			@include transition-duration(.2s);
+		}
+	}
+
+
+	// Contact Block
+	//==================================================================
+	.contact {
+		background: #c71263;
+
+		&:hover {
+			background: darken(#c71263, 20)
+		}
+	}
+
+
+	// Elements
+	//==================================================================
+	.row {
+		overflow: hidden;
+
+		.row {
+			@include make-row(5px);
+		}
+
+		.block1 {
+
+		}
+
+		.block2 {
+			@include media-query (sm) {
+				@include make-md-column(7, 2.5px);
+			}
+		}
+	}
+
+	a {
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.group {
+		position: relative;
+		display: block;
+
+		@include rem('padding', 20px 20px 40px);
+		@include rem('margin-bottom', 6px);
+
+		@include media-query (sm) {
+			@include rem('padding', 20px);
+			@include rem('margin-bottom', 20px);
+		}
+
+		//@include vollkorn(19px, #fff);
+
+		font-family: 'EB Garamond';
+		line-height: 1.5;
+		@include font-size(18px, 21px);
+
+		// Media Queries
+		//==================================================================
+		@include media-query (sm) {
+			height: 222px;
+			@include rem('margin-bottom', 5px);
+		}
+
+		&:hover {
+			@include transition-duration(.2s);
+		}
+
+		// Elements
+		//==================================================================
+		.link, h3 {
+			@include roboto(11px, #fff);
+			@include uppercase;
+		}
+
+		.link, .byline {
+			position: absolute;
+			bottom: 14px;
+			z-index: 9999;
+		}
+
+		.byline {
+			max-width: 75%;
+		}
+
+		.headline {
+			color: #fff;
+			position: relative;
+			z-index: 9999;
+		}
+
+		.link {
+			left: 20px;
+		}
+
+		.link:after {
+			content: '';
+			position: absolute;
+			top: 4px;
+			right: -12px;
+
+			width: 0;
+			height: 0;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			border-left: 6px solid #fff;
+		}
+	}
+
+	.group {
+
+		&:hover {
+			&:before {
+				@include opacity(.6);
+			}
+		}
+
+		// Children
+		//==================================================================
+		&.testimonials {
+			padding: 0;
+			margin: 0;
+
+			@include media-query (sm) {
+				height: 450px;
+				@include font-size(18px, 22px);
+			}
+
+			.byline {
+				@include font-size(10px);
+			}
+
+			blockquote {
+				position: relative;
+				height: 100%;
+
+				@include media-query (sm) {
+					@include font-size(26px);
+				}
+			
+
+				display: block;
+				border-left: none;
+				@include rem('padding', 40px 40px 60px);
+
+				@include media-query (sm) {
+					@include rem('padding', 70px 55px 20px);
+				}
+
+
+				&:before {
+					content: '\201C';
+					position: absolute;
+					left: 5px;
+					top: -5px;
+
+					font-family: 'EB Garamond', serif;
+					@include font-size(80px);
+
+					@include media-query (sm) {
+						left: 30px;
+						top: -10px;
+
+						@include font-size(113px);
+					}
+				}
+			}
+		}
+	}
+
+	.group {
+		height: 200px;
+
+		@include media-query (sm) {
+			height: 222px;
+		}
+
+
+		&.searches {
+			@extend %center;
+			@include font-size(12px, 20px);
+			background: #3a414e;
+
+			.circle {
+				width: 116px;
+				height: 116px;
+				@include rem('padding', 12px 0 0);
+
+				background: #9da0a7;
+				color: #fff;
+				@include font-size(48px);
+			}
+
+			p {
+				@include rem('margin', 12px 0 0);
+				@include font-size(16px);
+				line-height: 1;
+			}
+
+			&.group {
+				@include rem('padding', 12px);
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.footer-logo {
+		@include rem('margin-top', 20px);
+		@include rem('margin-bottom', 40px);
+		float: right;
+	}
+}
+

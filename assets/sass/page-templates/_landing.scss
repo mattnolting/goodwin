@@ -1,0 +1,69 @@
+body.landing {
+	height: 100%;
+	padding: 0;
+
+	main.main {
+		height: 100%;
+		@extend %reset;
+	}
+
+	.sticky-wrap {
+		margin-bottom: 50px;
+	}
+
+	.valign {
+		display: inline;
+		@include media-query (xs) {
+			display: block;
+		}
+
+	}
+
+	background: url('../img/bg_landing.jpg') no-repeat center top;
+	text-align: center;
+
+	@include media-query (xs) {
+		background-size: cover;
+	}
+
+	.logo-landing {
+
+		@include media-query (xs) {
+			width: 330px;
+		}
+
+		display: inline-block;
+		margin-top: 40px;
+
+		@include media-query (xs) {
+			margin: 0;
+		}
+
+
+		@include media-query (xs_max) {
+			width: 90%;
+			margin: 40px 5% 0;
+		}
+	}
+
+	h1 {
+		@include rem('margin', 32px 0 74px);
+		@include roboto(13px, #fff);
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.copyright {
+		@include roboto(12px, #fff);
+		@include rem('margin', 68px 0 18px);
+	}
+
+	.icon-list {
+		margin-bottom: 20px;
+
+		@include media-query (xs) {
+			margin: 0;
+		}
+
+	}
+}

@@ -1,0 +1,25 @@
+.sidebar {
+
+	h2 {
+		@include rem('margin', 0 0 12px);
+		@include rem('padding', 0 0 12px);
+		@include font-size(24px);
+		border-bottom: 1px solid #B3B3B3;
+		color: #3A414E;
+		text-align: right;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: right;
+
+		li {
+
+			a {
+				color: #5A5D68;
+				text-transform: uppercase;
+				font-family: 'Georgia', serif;
+			}
+		}
+	}
+}

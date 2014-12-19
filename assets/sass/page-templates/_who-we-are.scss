@@ -1,0 +1,227 @@
+// $xs_width: 320px;
+// $xs_height: 446px;
+
+// $sm_width: 420px;
+// $sm_active_width: 905px;
+// $sm_height: 635px;
+
+// $md_width: 455px;
+// $md_active_width: 1000px;
+// $md_height: 635px;
+.owl-item {
+
+	&:hover {
+		cursor: url(../grabbing.png) 8 8, move;
+	}
+}
+
+.who-we-are {
+
+	.modal-dialog {
+		max-width: 750px;
+		@include media-query (sm) {
+			width: 80%;
+		}
+
+		@include media-query (sm_max) {
+			margin-bottom: 100px;
+		}
+
+
+		color: #fff;
+
+		.modal-body {
+			@include rem('padding', 30px 62px);
+			background: #737886;
+
+			h1, h2, h3, h4 {
+				@include font-size(18px);
+				border-bottom: none;
+				padding-bottom: 0;
+
+				@include media-query (md) {
+					@include font-size(22px);
+				}
+			}
+
+			p {
+				line-height: 1.4;
+			}
+		}
+
+		.modal-footer {
+			@include rem('padding', 22px 62px);
+			@include font-size(16px);
+			line-height: 1.2;
+			margin-top: 0;
+			border-top: none;
+			background: #fff;
+			text-align: left;
+			color: #737886;
+
+			span {
+				display: block;
+			}
+		}
+
+		.close {
+			@include box-shadow(0 0 0 3px #FFF);
+		}
+	}
+
+	.owl-controls {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+
+		.owl-prev, .owl-next {
+			position: absolute;
+			width: 56px;
+			height: 56px;
+			display: block;
+			@include border-radius(50%);
+			background: url(../img/g_arrow-prev.png) #fff no-repeat center center;
+			background: url(../img/g_arrow-prev.png) rgba(255,255,255,.7) no-repeat center center;
+			background-size: 8px auto;
+			text-indent: -9999em;
+
+
+			&:hover {
+				background-color: rgba(255,255,255,.9);
+			}
+		}
+
+		.owl-prev {
+			left: 20px;
+		}
+
+		.owl-next {
+			right: 20px;
+			background-image: url(../img/g_arrow-next.png);
+		}
+	}
+
+	.owl-dots {
+		display: none !important;
+	}
+}
+
+#people {
+	@extend %clearfix;
+	position: relative;
+
+	.person {
+		position: relative;
+	}
+
+	.text-block {
+		background: #6a707e;
+		color: #fff;
+	}
+
+	.owl-item {
+		width: 400px;
+	}
+
+	.person {
+
+		.btn {
+			@include rem('padding', 5px 8px);
+			@include transition-duration(.2s);
+			@include font-size(10px);
+			@include border-radius(0);
+			background: #fff;
+			color: #f10172;
+			text-transform: uppercase;
+
+			&:hover {
+				color: #fff;
+				background: #f10172;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		h1, h2, h3, h4, p {
+			color: #fff;
+		}
+		h1, h2, h3, h4 {
+			@include font-size(18px);
+
+			@include media-query (md) {
+				@include font-size(25px);
+			}
+		}
+
+		p {
+			@include font-size(11px);
+			line-height: 1.2;
+		}
+
+		.bio-title {
+			position: absolute;
+			@include rem('padding', 7px);
+			width: 100%;
+			z-index: 999;
+			bottom: 0;
+			left: 0;
+
+			.bio-wrap {
+				height: 100%;
+				@include rem('padding', 20px);
+				background: #000;
+				background: rgba(0,0,0,.6);
+			}
+
+			h3 {
+				@extend %reset;
+				@include font-size(11px);
+				line-height: 1;
+				font-family: 'Helvetica', sans-serif;
+
+				&:first-child {
+					@extend %reset;
+					font-family: 'Georgia', serif;
+					@include font-size(19px);
+				}
+			}
+		}
+	}
+
+	.bio {
+		width: 100%;
+		@include rem('padding', 10px 30px);
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+
+		@include media-query (xs) {
+			width: 226px;
+		}
+
+		@include media-query (sm) {
+			width: 345px;
+		}
+
+		@include media-query (sm) {
+			width: 450px;
+		}
+
+
+		h1, h2, h3, h4 {
+			@include font-size(18px);
+		}
+
+		.close {
+			position: absolute;
+			right: 12px;
+			top: 12px;
+		}
+	}
+}

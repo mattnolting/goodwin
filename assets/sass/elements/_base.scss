@@ -1,0 +1,13 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	@include font-size($base_font_size, $base_line_height);
+	background-color: #f3f3f3;
+}
+
+.circle {
+	display: inline-block;
+	@include border-radius(50%);
+}

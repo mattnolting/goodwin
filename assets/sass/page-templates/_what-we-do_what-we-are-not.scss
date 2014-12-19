@@ -1,0 +1,60 @@
+.what-we-are-not {
+
+	h1, h3 {
+		text-align: center;
+		@include rem('margin', 0 0 34px);
+		color: #7b808d;
+	}
+}
+
+.options {
+	@include make-row(10px);
+	@include rem('margin-bottom', 60px);
+
+	.option {
+		height: 250px;
+
+		width: 100%;
+		@include rem('margin-bottom', 12px);
+		@include make-sm-column(4, 10px);
+
+		@include media-query (sm) {
+			height: 600px;
+			@include rem('margin-bottom', 4px);
+		}
+
+		@include media-query (md) {
+			height: 420px;
+			@include rem('margin-bottom', 4px);
+		}
+
+		.flip-front {
+			@include rem('padding', 0 12px);
+			background: url('../img/g_x.png') no-repeat center center #fff;
+			color: #7b808d;
+			border: 3px solid #d7d7d7;
+
+			h1, h2, h3 {
+				@extend %vertical-align;
+				display: block;
+				@include font-size(22px);
+				line-height: 1;
+			}
+		}
+
+		.flip-back {
+			@include rem('padding', 30px 30px 0);
+
+			font-family: 'Georgia', serif;
+			text-align: left;
+			background: #cc1919;
+			color: #fff;
+
+			.content {
+				// @extend %vertical-align;
+				// display: block;
+				color: #fff;
+			}
+		}
+	}
+}

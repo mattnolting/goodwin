@@ -1,0 +1,13 @@
+.circle {
+	width: 220px;
+	height: 220px;
+	@include border-radius(50%);
+	background: #fff;
+	color: #fff;
+
+	&.circle-large {
+		width: 340px;
+		height: 340px;
+		background: #297FD5;
+	}
+}

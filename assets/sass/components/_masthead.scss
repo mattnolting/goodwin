@@ -1,0 +1,11 @@
+.masthead {
+	@extend %reset;
+	@include rem('padding-top', 30px);
+	background: #fff;
+	border: none;
+
+	.logo {
+		@include rem('margin-bottom', 24px);
+		float: left;
+	}
+}

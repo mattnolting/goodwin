@@ -1,0 +1,111 @@
+.icon-list {
+
+	h3 {
+		color: #363d4b;
+		@include garamond(16px);
+		font-weight: bold;
+
+		a { color: #363d4b; }
+	}
+
+
+	.what-we-do & {
+		@include rem('margin', 30px 0);
+
+		@include media-query (sm) {
+			@include rem('margin', 65px 0 45px);
+		}
+	}
+}
+
+.icon-circle {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+
+	color: #fff;
+	@include font-size(24px);
+	@include border-radius(50%);
+	background: #727885;
+	border: 8px solid #c1c6c9;
+	@include transition(.4s);
+
+	span {
+		@extend %vertical-align;
+	}
+
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		background: #2572b8;
+		border: 8px solid #c71263;
+		@include transition(.4s);
+	}
+
+	.flip & {
+		background: #fff;
+		border: none;
+	}
+}
+
+.icon-simple {
+	width: 24px;
+	height: 24px;
+	border: 1px solid #fff;
+	background: none;
+	@include font-size(10px);
+
+	&:hover {
+		text-decoration: none;
+		background: #2572b8;
+		border: 1px solid #fff;
+		@include transition(.4s);
+		background: #2572b8;
+	}
+}
+
+.icon-large {
+	width: 135px;
+	height: 135px;
+
+	@include font-size(40px);
+}
+
+.icon-xlarge {
+	width: 246px;
+	height: 246px;
+
+	@include font-size(40px);
+}
+
+.icon-group {
+	@include rem('margin', 0 5px);
+	display: inline-block;
+	text-align: center;
+
+	@include media-query (sm) {
+		@include rem('margin', 0 10px);
+	}
+
+	@include media-query (md) {
+		@include rem('margin', 0 20px);
+	}
+
+}
+
+.contact-us {
+
+	.icon-list {
+		h3 {
+			position: absolute;
+			left: -9999em;
+		}
+	}
+
+	.icon-circle {
+		background: #fff;
+		@include font-size(120px);
+		color: #222348;
+	}
+
+}

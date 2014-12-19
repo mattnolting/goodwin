@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header_font_family;
+}
+
+h1 {
+	color: $header_font_color;
+	@include font-size($h1_font_size);
+	@include rem('margin', 0 0 30px);
+
+	@include media-query (sm) {
+		@include rem('margin', 20px 0 20px);
+	}
+}
+
+main.main {
+	h1:first-child {
+		margin-top: 0;
+	}
+}
+
+p {
+	@include rem('line-height', $paragraph_line_height);
+}
