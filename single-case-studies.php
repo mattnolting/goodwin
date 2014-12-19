@@ -2,7 +2,15 @@
 <?php $supporting_info = types_render_field("supporting-info", array("html"=>"true")); ?>
 
 <div class="row">
-	<h1 class="col-xs-12 center pink">Goodwin gets the digital home</h1>
+	<?php $case_title		= types_render_field("case-studies-page-title", array("raw"=>true)); ?>
+	<h1 class="col-xs-12 center pink">
+		<?php if($case_title) {
+			echo $case_title;
+		} else {
+			echo 'Goodwin gets the digital home';
+		}
+		?>
+	</h1>
 </div>
 
 <div class="row row-bordered">
