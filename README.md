@@ -1,1 +1,2 @@
-** Goodwin Search
+  Goodwin Search
+  =
