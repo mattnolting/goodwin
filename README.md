@@ -1,2 +1,3 @@
-  Goodwin Search
-  =====
+Goodwin Search
+====
+
